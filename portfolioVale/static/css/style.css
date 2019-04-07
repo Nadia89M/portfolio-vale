@@ -1,0 +1,397 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:100);
+
+@-webkit-keyframes fogl {
+  0% {
+    background-position: 0px 0%;
+  }
+  100% {
+    background-position: 1268px 0%;
+  }
+}
+
+@keyframes fogl {
+  0% {
+    background-position: 0px 0%;
+  }
+  100% {
+    background-position: 1268px 0%;
+  }
+}
+
+@-webkit-keyframes fog2 {
+  0% {
+    background-position: -768px 0%;
+  }
+  100% {
+    background-position: 500px 0%;
+  }
+}
+
+@keyframes fog2 {
+  0% {
+    background-position: -768px 0%;
+  }
+  100% {
+    background-position: 500px 0%;
+  }
+}
+
+html {
+  font-family: "Montserrat", sans-serif;
+}
+
+.sub {
+  padding-top: 10px;
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  font-weight: 300;
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.5), 2px 2px rgba(0, 0, 0, 0.35),
+    3px 3px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.fog {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-image: url("https://i.imgur.com/SFczcCK.png");
+  background-repeat: repeat-x;
+  z-index: 1;
+}
+
+.foganl {
+  -webkit-animation: fogl 20s linear 0s infinite;
+  animation: fogl 20s linear 0s infinite;
+}
+
+.fogan2 {
+  -webkit-animation: fog2 80s linear 0s infinite;
+  animation: fog2 80s linear 0s infinite;
+}
+
+.navbottom {
+  width: 60%;
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: no-wrap;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.navbutton {
+  width: calc(100% / 8);
+  flex: 1;
+  align-self: flex-end;
+  border: none;
+  color: #fe6c33;
+  background: #1e1e1e;
+  transition: flex 0.5s ease;
+}
+
+.navbutton:first-child {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.navbutton:last-child {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.navbutton:hover {
+  flex: 1.4;
+  border-top-right-radius: 4px;
+  border-top-left-radius: 4px;
+  transition: flex 0.4s ease;
+}
+
+.navic {
+  width: 100%;
+  text-align: center;
+  line-height: 50px;
+  font-size: 20px;
+  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.1),
+    -1px -1px 0px rgba(255, 255, 255, 0.1);
+  transition: line-height 0.5s ease, font-size 0.5s ease;
+}
+
+.navic:hover {
+  width: 100%;
+  text-align: center;
+  line-height: 90px;
+  font-size: 45px;
+  color: #1e1e1e;
+  background: #fe6c33;
+  transition: line-height 0.5s ease, font-size 0.5s ease;
+}
+
+.fogcon:hover .text {
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+@import url(https://fonts.googleapis.com/css?family=Shadows+Into+Light);
+@import url(https://fonts.googleapis.com/css?family=Oswald:400);
+@import url(https://fonts.googleapis.com/css?family=Raleway);
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.hamb {
+  text-decoration: none;
+  color: black;
+  font-size: 3em;
+  margin-left: 1rem;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  position: absolute;
+}
+.hamb.open {
+  color: white;
+}
+
+.psst {
+  display: inline-block;
+  font-size: 2em;
+  text-align: center;
+  margin-left: 5rem;
+  line-height: 2.5;
+}
+
+.nav {
+  position: absolute;
+  width: 0;
+  height: 0;
+  background: #000;
+  top: 0;
+  left: 0;
+}
+.nav a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.left,
+.right {
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.left {
+  float: left;
+  color: #fff;
+}
+.left h1 {
+  text-align: center;
+
+  text-transform: uppercase;
+  font-size: 5em;
+  margin: 8rem 0 0;
+  line-height: 1.1;
+}
+.left p {
+  text-align: center;
+  font-size: 2em;
+  margin: 0;
+  opacity: 0;
+}
+.left small {
+  opacity: 0;
+  text-align: center;
+  color: #e6e6e6;
+  font-size: 2em;
+  display: block;
+}
+.left .by-travis {
+  color: #fe6c33;
+}
+
+.right {
+  float: right;
+}
+
+.right-inner {
+  float: left;
+  height: 100%;
+  width: 0%;
+  text-align: center;
+  background: #2e2e2e;
+  margin: 0;
+  padding: 0;
+}
+
+.right-inner .ti {
+  text-align: center;
+  font-size: 0.7em;
+  font-style: oblique;
+  color: #fe6c33;
+}
+
+.right-inner .author {
+  text-align: center;
+  font-size: 0.7em;
+  color: white;
+}
+
+.right-inner li {
+  list-style-type: none;
+  opacity: 0;
+  font-size: 2em;
+  margin: 0.5rem 0;
+}
+.right-inner li:first-child {
+  margin-top: 5rem;
+}
+.right-inner hr {
+  width: 1rem;
+  height: 0.2rem;
+  border: 0;
+  background: black;
+}
+.right-inner .fake-search {
+  height: 2.5rem;
+  width: 11rem;
+  background: #000;
+  margin: 1rem auto;
+  cursor: text;
+  font-size: 0.35em;
+  color: gray;
+  line-height: 2.5rem;
+  text-align: left;
+  padding-left: 0.5rem;
+}
+.right-inner .social {
+  color: #fff;
+}
+.right-inner i {
+  margin: 0.25rem 0.35rem;
+  cursor: pointer;
+  color: gray;
+}
+.right-inner i:hover {
+  color: #fff;
+}
+.right-inner a {
+  font-size: 1em;
+}
+.right-inner a:hover {
+  color: #fe6c33;
+}
+.right-inner .nav-foot a {
+  margin: 0 1rem;
+  color: gray;
+  transition: 0.25s;
+  font-size: 0.5em;
+}
+.right-inner .nav-foot a:hover {
+  color: #fff;
+  transition: 0.25s;
+}
+
+#text {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+}
+#text {
+  min-height: 100vh;
+  width: 70vw;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+}
+#text h1 {
+  opacity: 0.9;
+}
+
+@media (max-width: 48rem) {
+  .left,
+  .right {
+    display: block;
+    float: none;
+    height: 50%;
+    width: 100%;
+  }
+
+  .right {
+    height: auto;
+  }
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+#canvas {
+  width: 50%;
+  height: 100%;
+  background: black;
+}
+
+#picture {
+  width: 50%;
+  height: 100%;
+  background: url("../img/guy.jpg");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  float: right;
+}
+
+.btn {
+  font-size: 1.5rem;
+  background: #fe6c33;
+  border: 1px solid #fe6c33;
+  padding: 10px;
+  text-transform: capitalize;
+  text-decoration: none;
+  color: white;
+}
+
+.btn:hover {
+  background: transparent;
+  border: 1px solid #fe6c33;
+  color: #fe6c33;
+}
+
+/* Extra small devices */
+@media only screen and (max-width: 600px) {
+  .left small {
+    font-size: 1em;
+  }
+  #text {
+    font-size: 1rem;
+  }
+}
+
+/* Small devices */
+@media only screen and (max-width: 768px) {
+  .left small {
+    font-size: 1.5em;
+  }
+  .left,
+  .right {
+    padding: 1em;
+  }
+  #text {
+    font-size: 1.5rem;
+  }
+}
