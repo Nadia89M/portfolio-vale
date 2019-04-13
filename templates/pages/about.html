@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<canvas id="canvas">
+</canvas>
+<div id="text">
+  <h1>About Me</h1>
+</div>
+<div id="picture"></div>
+<div id="about">
+    <div class="title">
+        <h4>Hi there, I am</h4>
+        <div class="name"></div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <div id="description">
+          <p><b>At</b> vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div id="skills">
+            <dl class="skills-diagram">
+                <dt class="skill-5">Creativity</dt>
+                <dd>5</dd>
+                <dt class="skill-10">Photoshop</dt>
+                <dd>10</dd>
+                <dt class="skill-3">CSS</dt>
+                <dd>3</dd>
+                <dt class="skill-8">Illustrator</dt>
+                <dd>8</dd>
+                <dt class="skill-4">HTML</dt>
+                <dd>4</dd>
+                <dt class="skill-6">Adobe XD</dt>
+                <dd>6</dd>
+                <dt class="skill-7">InDesign</dt>
+                <dd>7</dd>
+                <dt class="skill-9">Branding</dt>
+                <dd>9</dd>
+                <!-- <dt class="skill-2">C#</dt>
+                <dd>2</dd> -->
+              </dl>
+        </div>
+      </div>
+    </div>
+</div>
+<div class="navbottom">
+  <div class="navbutton nav1">
+    <i class="fab fa-linkedin-in navic"></i>
+  </div>
+  <div class="navbutton nav2">
+    <i class="fab fa-behance navic"></i>
+  </div>
+  <div class="navbutton nav3">
+    <i class="fab fa-instagram navic"></i>
+  </div>
+  <div class="navbutton nav4">
+    <i class="fas fa-shopping-cart navic"></i>
+  </div>
+</div>
+  <a href="#" class="hamb"><i class="fa fa-bars" style="color:#fe6c33;"></i>
+</a>
+<nav class="nav" role='navigation'>
+  <div class="left">
+    <h1 style="font-family: 'Raleway', sans-serif;">Valentino<br><span class="by-travis">_</span>G</h1>
+    <br><br>
+
+    <small  style="font-family: 'Raleway', sans-serif;"><i class="fas fa-pencil-ruler"></i></i> Graphic <span class="by-travis">Designer</small>
+  </div>
+  <br>
+
+  <div class="right">
+    <ul class="right-inner">
+	<hr>
+	<br>
+      <li><div class="ti">“Digital design is like painting, except the paint never dries”</div><br/><div class="author">Neville Brody</div></li>
+      <li></li>
+	  <br>
+    <hr>
+      <br>
+      <li><a class="nav-link" href="{% url 'index' %}">Home</a></li>
+      <li><a class="nav-link" href="{% url 'about' %}">About Me</a></li>
+      <!-- <li><a href="#">Services</a></li> -->
+      <li><a href="{% url 'portfolio' %}">Portfolio</a></li>
+	    <li><a href="{% url 'contact' %}">Contact Me</a></li>
+     <br>
+	 <br>
+	 <li>
+	 <li>
+      <li>
+
+      </li>
+      <li></li>
+
+    </ul>
+  </div>
+</nav>
+
+{% endblock %}

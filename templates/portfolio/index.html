@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+{% extends 'base.html' %} {% load static %} {% block content %}
+<canvas id="canvas"> </canvas>
+<div id="text">
+  <h1>Portfolio</h1>
+</div>
+<div id="picture"></div>
+<section id="portfolio" class="py-5">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-md-12">
+                <h2 class="py-5">Portfolio</h2>
+            </div>
+        </div>
+        <div class="row text-center">
+            {% if portfolio %}
+                {% for item in portfolio %}
+                <div class="col-md-4 mb-3">
+                    <div class="text-container">
+                        <img src="{{item.photo_main.url}}" alt="" class="mb-3 img-fluid homepage-img">
+                        <div class="centered">
+                            <h5><a href="portfolio/"></a>{{ item.title }}</a></h5>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            {% else %}
+                <div class="col-md-12">
+                    <p>No Portfolio Item Available</p>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</section>
+<div class="navbottom">
+        <div class="navbutton nav1">
+          <i class="fab fa-linkedin-in navic"></i>
+        </div>
+        <div class="navbutton nav2">
+          <i class="fab fa-behance navic"></i>
+        </div>
+        <div class="navbutton nav3">
+          <i class="fab fa-instagram navic"></i>
+        </div>
+        <div class="navbutton nav4">
+          <i class="fas fa-shopping-cart navic"></i>
+        </div>
+      </div>
+        <a href="#" class="hamb"><i class="fa fa-bars" style="color:#fe6c33;"></i>
+      </a>
+      <nav class="nav" role='navigation'>
+        <div class="left">
+          <h1 style="font-family: 'Raleway', sans-serif;">Valentino<br><span class="by-travis">_</span>G</h1>
+          <br><br>
+      
+          <small  style="font-family: 'Raleway', sans-serif;"><i class="fas fa-pencil-ruler"></i></i> Graphic <span class="by-travis">Designer</small>
+        </div>
+        <br>
+      
+        <div class="right">
+          <ul class="right-inner">
+          <hr>
+          <br>
+            <li><div class="ti">“Digital design is like painting, except the paint never dries”</div><br/><div class="author">Neville Brody</div></li>
+            <li></li>
+            <br>
+          <hr>
+            <br>
+            <li><a class="nav-link" href="{% url 'index' %}">Home</a></li>
+            <li><a class="nav-link" href="{% url 'about' %}">About Me</a></li>
+            <!-- <li><a href="#">Services</a></li> -->
+            <li><a href="{% url 'portfolio' %}">Portfolio</a></li>
+              <li><a href="{% url 'contact' %}">Contact Me</a></li>
+           <br>
+           <br>
+           <li>
+           <li>
+            <li>
+      
+            </li>
+            <li></li>
+      
+          </ul>
+        </div>
+      </nav>
+{% endblock %}
