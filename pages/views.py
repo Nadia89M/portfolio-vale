@@ -25,8 +25,8 @@ def contact(request):
             send_mail(
               'Contact Inquiry',
               'There has been an inquiry. Sign into the admin panel for more info.',
-              'nadia.mohamed89@gmail.com',
-              ['nadia.mohamed89@gmail.com'],
+              'valentino.grancagnolo@gmail.com',
+              ['valentino.grancagnolo@gmail.com'],
             )
             return thanks(request)
     return render(request, 'pages/contact.html', {'form': form})
