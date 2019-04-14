@@ -207,3 +207,5 @@ $(".hamb").on("click", function() {
     $.Velocity.RunSequence(menuOpen);
   }
 });
+
+$('#content-wrapper').append('<footer id="main-footer" class="bg-dark text-white text-center py-1"> Copyright &copy; <span class="year"></span> Just Virtual </footer>');
